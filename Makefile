@@ -1,5 +1,6 @@
 VERSION = 1.0.0
 DEST = $(PWD)/dist/frontline-nginx
+FPM_ARGS =
 
 .PHONY: clean
 clean:
@@ -19,4 +20,4 @@ $(DEST)/usr/local/sbin/frontline-nginx:
 
 .PHONY: deb
 deb: $(DEST)/usr/local/sbin/frontline-nginx
-	fpm -n frontline -s dir -t deb --chdir=$(DEST) --version=$(VERSION)
+	fpm -n frontline -s dir -t deb --chdir=$(DEST) --version=$(VERSION) $(FPM_ARGS)
