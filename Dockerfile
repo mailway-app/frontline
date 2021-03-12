@@ -1,4 +1,4 @@
-FROM debian:10
+FROM docker.io/debian:10
 
 RUN apt-get update && \
     apt-get install -y libssl-dev libpcre3-dev wget build-essential zlib1g-dev \
